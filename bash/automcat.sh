@@ -1,11 +1,11 @@
 #!/bin/bash
 
-apiedc=`curl -s -u admin:witami..tunai http://172.16.10.102:8082/stats | awk '/DOWN */ {print $4}' | sed -n '5p' | cut -c22-30`
-apiandroid=`curl -s -u admin:witami..tunai http://172.16.10.102:8082/stats | awk '/DOWN */ {print $4}' | sed -n '5p' | cut -c22-34`
-apichangestatus=`curl -s -u admin:witami..tunai http://172.16.10.102:8082/stats | awk '/DOWN */ {print $4}' | sed -n '5p' | cut -c22-39`
-#get4=`curl -u admin:witami..tunai http://172.16.10.102:8082/stats | awk '/DOWN */ {print $7}' | sed -n '5p' | cut -c21-26`
-#get5=`curl -u admin:witami..tunai http://172.16.10.102:8082/stats | awk '/DOWN */ {print $8}' | sed -n '5p' | cut -c21-26`
-#get6=`curl -u admin:witami..tunai http://172.16.10.102:8082/stats | awk '/DOWN */ {print $9}' | sed -n '5p' | cut -c21-26`
+apiedc=`curl -s -u admin:<password> http://172.16.10.102:8082/stats | awk '/DOWN */ {print $4}' | sed -n '5p' | cut -c22-30`
+apiandroid=`curl -s -u admin:<password> http://172.16.10.102:8082/stats | awk '/DOWN */ {print $4}' | sed -n '5p' | cut -c22-34`
+apichangestatus=`curl -s -u admin:<password> http://172.16.10.102:8082/stats | awk '/DOWN */ {print $4}' | sed -n '5p' | cut -c22-39`
+#get4=`curl -u admin:<password> http://172.16.10.102:8082/stats | awk '/DOWN */ {print $7}' | sed -n '5p' | cut -c21-26`
+#get5=`curl -u admin:<password> http://172.16.10.102:8082/stats | awk '/DOWN */ {print $8}' | sed -n '5p' | cut -c21-26`
+#get6=`curl -u admin:<password> http://172.16.10.102:8082/stats | awk '/DOWN */ {print $9}' | sed -n '5p' | cut -c21-26`
 
 
 if [ "$apiedc" == "API-EDC_1" ]
